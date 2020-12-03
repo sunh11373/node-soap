@@ -1285,7 +1285,7 @@ export class WSDL {
     const xmlns = this.definitions.xmlns;
     let str = '';
     for (const alias in xmlns) {
-      if (alias === '' || alias === TNS_PREFIX) {
+      if (alias === '' || alias === TNS_PREFIX || alias.startsWith('q')) {
         continue;
       }
       const ns = xmlns[alias];
